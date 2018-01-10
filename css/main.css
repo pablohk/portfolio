@@ -23,7 +23,7 @@ i::after {
 /* nav ---------------------------------------------------*/
 .nav-top {
   width: 100%;
-  background-color: grey;
+  background-color: green;
 }
 .nav-top a {
   font-size: 1.7em;
@@ -33,12 +33,18 @@ i::after {
 /* header ------------------------------------------------*/
 header {
   width: 100%;
-  background: green;
+  background: white;
   font-size: 1.4em;
-  height:200px;
+  position: relative;
 }
 
-
+.logo {
+  width: 12vw;
+  border-radius: 50%;
+}
+header > section {
+  width: 100%;
+}
 /* main --------------------------------------------------*/
 main {
   width: 100%;
@@ -46,20 +52,24 @@ main {
   height: 200px;
 }
 
-/* detail section into main */
-.p-photo img {
+/* detail section into main _____________________________*/
+.details{
+  background-color: yellow;
+  padding-top: 10px;
+  width: 100%;
+  font-size: 1.5em;
+  border-bottom:2px solid #BDB8B8;
+}
+.p-photo {
   width: 8vh;
   border-radius: 50%;
 }
 
-.details{
-  background-color: yellow;
-  margin-top: 20px;
-  width: 100%;
-  font-size: 1.5em;
+/* education section into main _____________________________*/
+.education{
+  background-color: white;
+  height:100px;
 }
-
-
 /* footer ------------------------------------------------*/
 footer {
   background-color: #000;
