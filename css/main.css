@@ -1,0 +1,106 @@
+/* Global config -----------------------------------------*/
+body, a {
+  font-size: 10px;
+  color: #000;
+}
+.container {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+i::after {
+  content: "\00a0\00a0";
+}
+.vertical-list {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* nav ---------------------------------------------------*/
+.nav-top {
+  width: 100%;
+  background-color: grey;
+}
+.nav-top a {
+  font-size: 1.7em;
+  padding: 1%;
+}
+
+/* header ------------------------------------------------*/
+header {
+  width: 100%;
+  background: green;
+  font-size: 1.4em;
+  height:200px;
+}
+
+
+/* main --------------------------------------------------*/
+main {
+  width: 100%;
+  background-color: red;
+  height: 200px;
+}
+
+/* detail section into main */
+.p-photo img {
+  width: 8vh;
+  border-radius: 50%;
+}
+
+.details{
+  background-color: yellow;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+
+/* footer ------------------------------------------------*/
+footer {
+  background-color: #000;
+  color: #fff;
+}
+footer nav {
+  width: 100%;
+  padding: 2%;
+}
+footer nav a, footer a:visited {
+  color: #fff;
+  font-size: 3em;
+}
+footer nav a:hover {
+  color: red;
+}
+.copyright {
+  font-size: 2em;
+  text-align: center;
+  padding: 2%;
+}
+
+/* Responsive Media Queries --------------------------*/
+@media (max-width: 480px) {
+  .p-photo {
+    display: none;
+  }
+  .nav-top a {
+    font-size: 1.3em;
+    padding: 1%;
+  }
+  .details{
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .details.vertical-list{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .details > article{
+    width: 70%;
+    margin-left: 15%;
+  }
+}
