@@ -48,7 +48,7 @@ header > section {
 }
 
 #goals{
-  font-size: 1.7em;
+  font-size: 1.5em;
   text-align: center;
   width: 90%;
   margin-left: 5%;
@@ -57,26 +57,33 @@ header > section {
 main {
   width: 100%;
   background-color: red;
-  height: 200px;
 }
 
 /* detail section into main _____________________________*/
 .details{
   background-color: yellow;
-  padding-top: 10px;
+  padding: 10px 0 10px 0;
   width: 100%;
-  font-size: 1.7em;
+  font-size: 1.5em;
   border-bottom:2px solid #BDB8B8;
 }
-img.p-photo {
-  display: inline-block;
-  width: 10vh;
+.details .vertical-list{
+  flex-direction: column;
+  align-items:flex-start;
+}
+
+.details article{
+  width: 60%;
+}
+#p-photo{
+  width: 20%;
   border-radius: 50%;
+  padding:1%;
 }
 
 /* education section into main _____________________________*/
 .education{
-  background-color: white;
+  background-color: pink;
   height:100px;
 }
 /* footer ------------------------------------------------*/
@@ -104,19 +111,19 @@ footer nav a:hover {
 /* Responsive Media Queries --------------------------*/
 @media (max-width: 425px) {
   body {
-    font-size: 5px;
+    font-size: 8px;
   }
-  img.p-photo {
+  /*#p-photo {
     display: none;
-  }
+  }*/
 
-  /*.details.vertical-list{
-    flex-direction: column;
-    align-items:flex-start;
+}
+@media (min-width:800px) {
+  body {
+    font-size: 12px;
+  }
+  /*#p-photo {
+    display: none;
   }*/
-  /*.details > article{
-    text-align:center;
-    width: 70%;
-    margin-left: 15%;
-  }*/
+
 }
