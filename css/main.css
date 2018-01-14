@@ -6,22 +6,41 @@
 }
 
 /* Global config -----------------------------------------*/
-body, a {
+
+body, p, a, i, h1, h2, h3, h4, h5, h6, strong {
   font-size: 10px;
   font-family: Roboto;
   color: #000;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
 }
+
 .container {
   width: 100%;
   margin: 0px;
   padding: 0px;
 }
 
-i{
+i {
   margin-right: 1rem;
-
 }
+
 .vertical-list {
+  /*display: -webkit-inline-flex;
+  -webkit-box-orient: inline-axis;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;*/
+  /*display: -moz-inline-box;
+  -moz-box-orient: inline-axis;
+  -moz-box-direction: normal;
+  -moz-justify-content: space-around;
+  -moz-box-align: center;*/
+  /*display: -ms-inline-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-align: center;*/
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
@@ -37,16 +56,19 @@ i{
 }
 
 /* nav ---------------------------------------------------*/
+
 .nav-top {
   width: 100%;
-  background-color: green;
+  background-color: #989baf85;
 }
-.nav-top a{
+
+.nav-top a {
   font-size: 1.7em;
-  padding: 1%;
+  padding: 1em;
 }
 
 /* header ------------------------------------------------*/
+
 header {
   width: 100%;
   background: white;
@@ -54,75 +76,98 @@ header {
   position: relative;
 }
 
-img.logo {
+.logo {
   width: 20%;
-  padding:3%;
-  border-radius: 50%;
+  padding: 1em;
 }
+
 header > section {
   width: 100%;
 }
 
-#goals{
+#goals {
   font-size: 1em;
   text-align: center;
   width: 90%;
   margin-left: 5%;
 }
+
 /* main --------------------------------------------------*/
+
 main {
   width: 100%;
 }
 
 /* detail section into main _____________________________*/
-.details{
-  background-color: red;
+
+.details {
   padding: 10px 0 10px 0;
   width: 100%;
   font-size: 1.7em;
-  border-bottom:2px solid #BDB8B8;
 }
 
-.details article{
+.details article {
   vertical-align: 1em;
 }
-#p-photo{
+
+#p-photo {
   width: 20%;
   border-radius: 50%;
-  padding:1%;
+  padding: 1%;
 }
 
 /* education section into main _____________________________*/
-.education{
-  background-color: pink;
+
+.education {
   width: 100%;
-  height:100px;
 }
 
-.educa-cart  h3{
-  border: 1px solid black;
-  width:10%;
+.educa-cart {
+  margin-bottom:3em;
+  box-shadow: 3px 3px 10px 5px #000,
+            0 0 4px rgba(0, 0, 0, .5) inset;
+  padding-bottom:1em;
 }
-.content , .content img {
-    border: 1px solid black;
+
+.educa-cart h5 {
+  width: 20%;
+  margin: 0  0 0 80%;
+  display: block;
+}
+
+.educa-cart img {
+  width: 6em;
+  margin-left: 1em;
+}
+
+.content {
+  display: inline-block;
+  width: 230px;
+  vertical-align: middle;
+  margin-left:1em;
 }
 
 /* footer ------------------------------------------------*/
-footer {
+
+footer, footer a, footer i, footer p {
   background-color: #000;
   color: #fff;
 }
+
 footer nav {
   width: 100%;
   padding: 2%;
 }
+
 footer nav a, footer a:visited {
   color: #fff;
   font-size: 3em;
 }
+
 footer nav a:hover {
   color: red;
 }
+
 .copyright {
   font-size: 2em;
   text-align: center;
@@ -130,12 +175,9 @@ footer nav a:hover {
 }
 
 /* Responsive Media Queries --------------------------*/
-@media (max-width: 425px) {
+
+@media screen and (max-width: 425px) {
   body {
     font-size: 8px;
   }
-#goals{
-    font-size:1em;
-  }
-
 }
