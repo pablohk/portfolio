@@ -6,7 +6,6 @@
 }
 
 /* Global config -----------------------------------------*/
-
 html {
   font-size: 10px;
   font-family: Roboto;
@@ -59,7 +58,6 @@ i, strong {
 }*/
 
 /* nav ---------------------------------------------------*/
-
 .nav-top {
   width: 100%;
   background-color: #989baf85;
@@ -70,7 +68,6 @@ i, strong {
 }
 
 /* header ------------------------------------------------*/
-
 header {
   width: 100%;
   position: relative;
@@ -92,13 +89,11 @@ header>section {
 }
 
 /* main --------------------------------------------------*/
-
 main {
   width: 100%;
 }
 
 /* detail section into main _____________________________*/
-
 .details {
   padding: 10px 0 10px 0;
   width: 100%;
@@ -115,13 +110,12 @@ main {
 }
 
 /* education section into main _____________________________*/
-
 .education {
   width: 100%;
 }
 
 .educa-cart {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   box-shadow: 3px 3px 10px 5px #000, 0 0 4px rgba(0, 0, 0, .5) inset;
   padding-bottom: 1em;
 }
@@ -141,27 +135,80 @@ main {
 .content {
   display: inline-block;
   width: 200px;
-  padding: 0 1em 0 1em;
+  padding: 0 1em;
+}
+/* experience section into main _____________________________*/
+.timeline {
+  list-style: none;
+  margin-left: 5rem;
+  border-left: 2px solid black;
+  margin-top: 1rem;
+}
+
+.tldate {
+  display: block;
+  width: 7rem;
+  margin-left: -4rem;
+  padding:0.5rem;
+  background-color: #d60606;
+  border: 1px solid #000;
+  border-radius: 50%;
+  color: #FFF;
+
+  font-weight: bold;
+  text-align: center;
+  -webkit-box-shadow: 0 0 17px rgba(221, 0, 0, 0.83);
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-panel {
+  width: 70%;
+  position: relative;
+  padding: 1rem;
+  margin-left: 1.3rem;
+  background-color: #fff;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-panel:before {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: -1.3rem;
+  border-top: 1.3rem solid transparent;
+  border-right: 1.3rem solid #ccc;
+  border-bottom: 1.3rem solid transparent;
+  content: " ";
+}
+
+.tl-heading  {
+  margin: 0;
+  color: #c25b4e;
 }
 
 /* footer ------------------------------------------------*/
 
 footer {
   width: 100%;
+  background-color: #000;
 }
 
-footer * {
-  background-color: #000;
+footer p, footer i {
   color: #fff;
 }
 
 footer nav {
   width: 100%;
   padding-top: 1em;
-}
-
-footer nav a:visited {
-  color: yellow;
 }
 
 footer nav a:hover {
@@ -175,11 +222,6 @@ footer nav a:hover {
 
 /* Responsive Media Queries --------------------------*/
 
-/*@media only screen and (max-width: 425px) {
-  body {
-    font-size: 8px;
-  }
-}*/
 
 @media only screen and (max-width: 320px) {}
 

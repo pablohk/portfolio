@@ -15,170 +15,33 @@
   <!-- Jquery -->
   <script src="./lib/jquery-3.2.1.slim.min.js"></script>
   <!-- bootstrap v 3.3.7  -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   <!-- fontawesome fa icons-->
   <link rel="stylesheet" href="./media/fonts/font-awesome-4.7.0/font-awesome.css" type="text/css">
   <!-- Lodash Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
 
   <!-- Custom files, css, js -->
-  <link rel="stylesheet" href="./css/probes.css" type="text/css">
-  <script src="./js/probes.js"></script>
+  <link rel="stylesheet" href="./css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="./css/probes.css">
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <script src="./js/main.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="page-header">
-      <h1 id="">Timeline</h1>
-    </div>
-    <div id="timeline">
-      <div class="row timeline-movement timeline-movement-top">
-        <div class="timeline-badge timeline-future-movement">
-          <a href="#">
-            <span class="glyphicon glyphicon-plus"></span>
-        </a>
-        </div>
-        <div class="timeline-badge timeline-filter-movement">
-          <a href="#">
-            <span class="glyphicon glyphicon-time"></span>
-        </a>
-        </div>
-
-      </div>
-      <div class="row timeline-movement">
-
-        <div class="timeline-badge">
-          <span class="timeline-balloon-date-day">18</span>
-          <span class="timeline-balloon-date-month">APR</span>
-        </div>
-
-
-        <div class="col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-11">
-              <div class="timeline-panel credits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-11">
-              <div class="timeline-panel debits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--due -->
-
-      <div class="row timeline-movement">
-
-
-        <div class="timeline-badge">
-          <span class="timeline-balloon-date-day">13</span>
-          <span class="timeline-balloon-date-month">APR</span>
-        </div>
-
-        <div class="col-sm-offset-6 col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-11">
-              <div class="timeline-panel debits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-11">
-              <div class="timeline-panel credits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="row timeline-movement">
-
-
-        <div class="timeline-badge">
-          <span class="timeline-balloon-date-day">10</span>
-          <span class="timeline-balloon-date-month">APR</span>
-        </div>
-
-        <div class="col-sm-offset-6 col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-offset-1 col-sm-11">
-              <div class="timeline-panel debits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6  timeline-item">
-          <div class="row">
-            <div class="col-sm-11">
-              <div class="timeline-panel credits">
-                <ul class="timeline-panel-ul">
-                  <li><span class="importo">Mussum ipsum cacilds</span></li>
-                  <li><span class="causale">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> </li>
-                  <li>
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11/09/2014</small></p>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
+  <ul class="timeline">
+    <li class="tldate">Apr 2014</li>
+    <li class="timeline-panel">
+        <h4 class="tl-heading">Surprising Headline Right Here</h4>
+        <p>Lorem Ipsum and such.</p>
+    </li>
+    <li class="timeline-panel">
+        <h4 class="tl-heading">Surprising Headline Right Here</h4>
+        <p>Lorem Ipsum and such.</p>
+    </li>
+    <li class="tldate">Mar 2014</li>
+  </ul>
 </body>
+
+</html>
