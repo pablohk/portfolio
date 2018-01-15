@@ -6,10 +6,12 @@
 }
 
 /* Global config -----------------------------------------*/
+
 html {
   font-size: 10px;
   font-family: Roboto;
   line-height: 1.2em;
+  background-color: #cddc395c
 }
 
 * {
@@ -27,7 +29,7 @@ i, strong {
   margin-right: 1em;
 }
 
-.vertical-list {
+.horizontal-list {
   /*display: -webkit-inline-flex;
   -webkit-box-orient: inline-axis;
   -webkit-flex-direction: row;
@@ -50,7 +52,7 @@ i, strong {
   flex-wrap: wrap;
 }
 
-/*.horizontal-list {
+/*.vertical-list {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -58,19 +60,29 @@ i, strong {
 }*/
 
 /* nav ---------------------------------------------------*/
+
 .nav-top {
   width: 100%;
-  background-color: #989baf85;
+  height: 3rem;
+  background-color: #000;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-top a {
   padding: 1em;
+  color: #FFF;
+  font-weight: bold;
 }
 
 /* header ------------------------------------------------*/
+
 header {
   width: 100%;
   position: relative;
+  margin-top: 3.5rem;
 }
 
 .logo {
@@ -82,24 +94,20 @@ header>section {
   width: 100%;
 }
 
-#goals {
-  text-align: justify;
-  width: 80%;
-  margin: 1rem 10%;
-}
-
 /* main --------------------------------------------------*/
+
 main {
   width: 100%;
 }
 
-/* detail section into main _____________________________*/
-.details {
+/* contact section into main _____________________________*/
+
+#contact {
   padding: 10px 0 10px 0;
   width: 100%;
 }
 
-.details article {
+#contact article {
   vertical-align: 1em;
 }
 
@@ -110,14 +118,17 @@ main {
 }
 
 /* education section into main _____________________________*/
-.education {
+
+#education {
   width: 100%;
+  padding-top:2rem;
 }
 
 .educa-cart {
   margin-bottom: 2em;
-  box-shadow: 3px 3px 10px 5px #000, 0 0 4px rgba(0, 0, 0, .5) inset;
+  box-shadow: 3px 3px 10px 5px #985f69, 0 0 4px rgba(0, 0, 0, .5) inset;
   padding-bottom: 1em;
+  background-color: #bfd6d1a1
 }
 
 .educa-cart h5 {
@@ -137,7 +148,9 @@ main {
   width: 200px;
   padding: 0 1em;
 }
+
 /* experience section into main _____________________________*/
+
 .timeline {
   list-style: none;
   margin-left: 5rem;
@@ -149,12 +162,11 @@ main {
   display: block;
   width: 7rem;
   margin-left: -4rem;
-  padding:0.5rem;
+  padding: 0.5rem;
   background-color: #d60606;
   border: 1px solid #000;
   border-radius: 50%;
   color: #FFF;
-
   font-weight: bold;
   text-align: center;
   -webkit-box-shadow: 0 0 17px rgba(221, 0, 0, 0.83);
@@ -170,13 +182,13 @@ main {
   padding: 1rem;
   margin-left: 1.3rem;
   background-color: #fff;
-  border: 1px solid #d4d4d4;
+  border: 1px solid #d60606;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
+  -moz-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
+  box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
 }
 
 .timeline-panel:before {
@@ -185,14 +197,66 @@ main {
   top: 17px;
   left: -1.3rem;
   border-top: 1.3rem solid transparent;
-  border-right: 1.3rem solid #ccc;
+  border-right: 1.3rem solid #d60606;
   border-bottom: 1.3rem solid transparent;
   content: " ";
 }
 
-.tl-heading  {
+.timeline-panel h4 {
   margin: 0;
-  color: #c25b4e;
+  color: #03715e;
+}
+
+.duration::before {
+  content: "Duration:";
+  padding-right: 0.5rem;
+}
+
+.timeline-panel h4::before {
+  content: "Role:";
+  padding-right: 0.5rem;
+}
+
+.timeline-panel h4+p::before {
+  content: "Company:";
+  padding-right: 0.5rem;
+}
+
+.exp-show:hover {
+  color: #d60606;
+  cursor: pointer;
+}
+
+.exp-list {
+  display: none;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.exp-list>p::before {
+  content: "-";
+  padding-right: 0.5rem;
+}
+/* proyect section into main ___________________________*/
+#proyect {
+  width: 100%;
+  text-align: center;
+
+}
+#proyect img {
+  width: 100%;
+}
+
+#proyect >figure{
+  width: 10rem;
+}
+
+
+/* skill section into main _____________________________*/
+#goals {
+  text-align: justify;
+  width: 80%;
+  margin: 1rem 10%;
 }
 
 /* footer ------------------------------------------------*/
@@ -211,8 +275,8 @@ footer nav {
   padding-top: 1em;
 }
 
-footer nav a:hover {
-  color: red;
+footer nav i:hover {
+  color: #d60606;
 }
 
 .copyright {
@@ -221,7 +285,6 @@ footer nav a:hover {
 }
 
 /* Responsive Media Queries --------------------------*/
-
 
 @media only screen and (max-width: 320px) {}
 
