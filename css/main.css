@@ -11,7 +11,6 @@ html {
   font-size: 10px;
   font-family: Roboto;
   line-height: 1.2em;
-  background-color: #cddc395c
 }
 
 * {
@@ -21,12 +20,18 @@ html {
   padding: 0;
 }
 
-.container {
-  width: 100%;
-}
-
 i, strong {
   margin-right: 1em;
+}
+
+section, header{
+  background-attachment: fixed;
+  background-position: left center;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
 }
 
 .horizontal-list {
@@ -44,37 +49,33 @@ i, strong {
   /*display: -ms-inline-flexbox;
   -ms-flex-direction: row;
   -ms-flex-align: center;*/
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
   display: inline-flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-content: stretch;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-/*.vertical-list {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  align-content: flex-start;
-}*/
-
 /* nav ---------------------------------------------------*/
-
 .nav-top {
   width: 100%;
   height: 3rem;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.8);
   position: fixed;
   overflow: hidden;
   top: 0;
   z-index: 100;
 }
-
 .nav-top a {
   padding: 1em;
   color: #FFF;
   font-weight: bold;
+}
+
+.nav-top a.active {
+background-color: rgba(134,127,127,1);
 }
 
 /* header ------------------------------------------------*/
@@ -82,7 +83,8 @@ i, strong {
 header {
   width: 100%;
   position: relative;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
+  background-color: #cddc395c;
 }
 
 .logo {
@@ -100,35 +102,33 @@ main {
   width: 100%;
 }
 
-/* contact section into main _____________________________*/
-
-#contact {
-  padding: 10px 0 10px 0;
-  width: 100%;
+/* skill section into main _____________________________*/
+#skill{
+  background-image: url('../media/img/skill-BG.jpg');
+  text-align: justify;
+  width: 90%;
+  padding: 5%;
 }
 
-#contact article {
-  vertical-align: 1em;
-}
-
-#p-photo {
-  width: 5em;
-  border-radius: 50%;
-  padding: 1%;
+#skill * {
+  color:#FFF;
+  margin-bottom:1%;
+  line-height: 180%;
 }
 
 /* education section into main _____________________________*/
 
 #education {
   width: 100%;
-  padding-top:2rem;
+  padding-top: 2rem;
+  background-image: url('../media/img/education-BG.jpg');
 }
 
 .educa-cart {
   margin-bottom: 2em;
   box-shadow: 3px 3px 10px 5px #985f69, 0 0 4px rgba(0, 0, 0, .5) inset;
   padding-bottom: 1em;
-  background-color: #bfd6d1a1
+  background-color: rgba(191, 214, 209, 1);
 }
 
 .educa-cart h5 {
@@ -151,11 +151,15 @@ main {
 
 /* experience section into main _____________________________*/
 
+#experience {
+background-image: url('../media/img/experience-BG.jpg');
+}
+
 .timeline {
   list-style: none;
   margin-left: 5rem;
-  border-left: 2px solid black;
-  margin-top: 1rem;
+  border-left: 5px solid black;
+  padding: 1rem 0;
 }
 
 .tldate {
@@ -237,33 +241,57 @@ main {
   content: "-";
   padding-right: 0.5rem;
 }
-/* proyect section into main ___________________________*/
-#proyect {
-  width: 100%;
-  text-align: center;
 
+/* proyect section into main ___________________________*/
+
+#proyect {
+  padding: 2% 0;
+  width: 100%;
+  background-image: url('../media/img/proyect-BG.jpg');
 }
+
+#proyect>figure {
+  width: 14rem;
+  height: 14rem;
+  position: relative;
+  margin: 0 0 0.5rem 0;
+  /*padding: 0.5rem;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#proyect>figure:hover a {
+  opacity: 0.8;
+}
+
 #proyect img {
   width: 100%;
+  object-fit:contain;
 }
 
-#proyect >figure{
-  width: 10rem;
-}
-
-
-/* skill section into main _____________________________*/
-#goals {
+#proyect figure a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+  opacity: 0;
+  color: #fff;
+  background: #000;
+  -webkit-transition: opacity 800ms;
+  -moz-transition: opacity 800ms;
+  -o-transition: opacity 800ms;
+  transition: opacity 800ms;
   text-align: justify;
-  width: 80%;
-  margin: 1rem 10%;
+  line-height: 180%;
 }
 
 /* footer ------------------------------------------------*/
-
+/* footer height for mark Proyect and contact nav a*/
 footer {
   width: 100%;
   background-color: #000;
+  height: 100vh;
 }
 
 footer p, footer i {
@@ -283,12 +311,24 @@ footer nav i:hover {
   text-align: center;
   padding: 2%;
 }
+/* contact section into footer _____________________________*/
 
+#contact {
+  padding: 10px 0 10px 0;
+  width: 100%;
+  border-bottom:2px solid #FFF;
+}
+
+#contact article {
+  vertical-align: 1em;
+}
+
+#p-photo {
+  width: 7em;
+  border-radius: 50%;
+  padding: 1%;
+}
 /* Responsive Media Queries --------------------------*/
-
-@media only screen and (max-width: 320px) {}
-
-@media only screen and (min-width: 321px) and (max-width:480px) {}
 
 @media only screen and (min-width: 481px) and (max-width:767px) {
   html {
@@ -322,7 +362,7 @@ footer nav i:hover {
 
 @media only screen and (min-width: 1824px) {
   html {
-    font-size: 35px;
+    font-size: 26px;
   }
   .educa-cart img {
     width: 2.5em;

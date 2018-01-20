@@ -12,16 +12,13 @@ const logoPath = [
 $(document).ready(function() {
   loadLogos(logoPath);
 
-// Update the logos img each 2 seconds
-  //let Idmix = setInterval(mix, 1000 * 2);
+  // Update the logos img each 2 seconds
+  let Idmix = setInterval(mix, 1000 * 2);
   showDetails();
+  markNavlink();
+  scrollToSection();
   // END document ready
 });
-
-// Shuffle the logos show in header tag
-function logoShuffle() {
-  loadLogos(_.shuffle(logoPath));
-}
 
 // Show / hide  the previous DOM elements of clicked element
 function showDetails() {
@@ -36,16 +33,16 @@ function showDetails() {
 
 // Show  the Contact DOM elements
 function showContact() {
-  $('#contact').css('visibility','visible');
+  $('#contact').css('visibility', 'visible');
 }
 
 //  Change random 2 elements in array and show all of them on the front
 function mix() {
-  //let rdm = (()=>Math.floor(Math.random()*logoPath.length));
   let rdm = function() {
     return Math.floor(Math.random() * logoPath.length);
   };
-  let initial = rdm(),final = rdm();
+  let initial = rdm(),
+    final = rdm();
   let initialEl = $('header .logo:nth-child(' + (initial + 1) + ')');
   let finalEl = $('header .logo:nth-child(' + (final + 1) + ')');
   initialEl.attr('src', logoPath[final]);
@@ -56,5 +53,35 @@ function mix() {
 function loadLogos(arr) {
   $("header .logo").each(function(index) {
     $(this).attr('src', arr[index]);
+  });
+}
+
+function markNavlink() {
+  let sections = $('section'),nav = $('.nav-top');
+  $(window).on('scroll', function() {
+    let cur_pos = $(this).scrollTop();
+    sections.each(function() {
+      nav_height = nav.height();
+      let top = $(this).offset().top - nav_height,
+        bottom = top + $(this).height();
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('a').removeClass('active');
+        let id = $(this).text().toLowerCase();
+        nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+      }
+    });
+  });
+}
+
+function scrollToSection() {
+  let navLink = $('.nav-top a');
+  navLink.each(function() {
+    $(this).click(function(e) {
+      e.preventDefault();
+      let nav_height=$('.nav-top').height();
+      let id = '#'.concat($(this).text().toLowerCase());
+      $('html,body').animate({
+        scrollTop:$(id).offset().top-nav_height+2},2000);
+    });
   });
 }

@@ -13,18 +13,14 @@
   <meta name="description" content="Personal Portfolio">
   <meta name="keywords" content="ironhack,HTML,CSS,JavaScript,portfolio">
   <!-- Jquery -->
-  <script src="./lib/jquery-3.2.1.slim.min.js"></script>
-  <!-- bootstrap v 3.3.7  -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-  <!-- fontawesome fa icons-->
+  <script src="./lib/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="./media/fonts/font-awesome-4.7.0/font-awesome.css" type="text/css">
   <!-- Lodash Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script> -->
 
   <!-- Custom files, css, js -->
   <link rel="stylesheet" href="./css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <link rel="stylesheet" href="./css/main.css">
   <script src="./js/main.js"></script>
 </head>
 
@@ -32,9 +28,10 @@
   <div class="container">
     <!-- Start nav -->
     <nav class="horizontal-list nav-top">
-      <a href="#education">Edutacion</a>
-      <a href="#experience">Experiencie</a>
-      <a href="#proyect">Proyects</a>
+      <a href="#skill">Skill</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#proyect">Proyect</a>
       <a href="#contact">Contact</a>
     </nav>
     <!-- End nav -->
@@ -55,6 +52,16 @@
     <!-- End header -->
     <!-- Start main -->
     <main>
+      <!-- Start skill section -->
+      <section id="skill">
+        <h3>I am looking for new experiences where I can apply,
+           consolidate and enlarge my current knowledge into the programming
+           industry. Help towards the success of the company with my experience
+           and professional skill.
+        </h3>
+        <p> </p>
+      </section>
+      <!-- End skill section -->
       <!-- Start education section -->
       <section id="education" class="horizontal-list">
         <article class="educa-cart">
@@ -77,15 +84,14 @@
             <p><strong>Desciption:</strong>780 h course learning Java,Java Web, MVC pattern, Hibernate and Spring </p>
           </div>
         </article>
-
         <article class="educa-cart">
           <h5>1998-2005</h5>
           <img src="./media/img/euitt.png" alt="img">
           <div class="content">
-            <p><strong>Title:</strong>Grade in telecomunications</p>
+            <p><strong>Title:</strong>Grade in telecommunications</p>
             <p><strong>College:</strong>UPM</p>
             <p><strong>City:</strong>Madrid</p>
-            <p><strong>Desciption:</strong>Telecomunications System, focused in broadcasting antenna systems</p>
+            <p><strong>Desciption:</strong>Telecommunications System, focused in broadcasting antenna systems</p>
           </div>
         </article>
       </section>
@@ -157,34 +163,28 @@
       <!-- End experience section  -->
       <!-- Start proyect section  -->
       <section id="proyect" class="horizontal-list">
-          <figure>
-            <img src="./media/img/euitt.png" alt="photo-fishing proyect image">
-            <figcaption>Photo-Fishing</figcaption>
-          </figure>
-          <figure>
-            <img src="./media/img/euitt.png" alt="photo-fishing proyect image">
-            <figcaption>Brain-Burst</figcaption>
-          </figure>
-          <figure>
-            <img src="./media/img/euitt.png" alt="photo-fishing proyect image">
-            <figcaption>Libros-Felices</figcaption>
-          </figure>
-          <figure>
-            <img src="./media/img/euitt.png" alt="photo-fishing proyect image">
-            <figcaption>dsfsdf sadfa sdfas</figcaption>
-          </figure>
+        <figure>
+          <img src="./media/img/photo-fishing-logo.png" alt="photo-fishing proyect image">
+          <a href="https://photo-fishing.herokuapp.com">Ironhack's final project. A MBP responsive web design using all acquired knowledges: Angular, Node, ExpressJs, API's, TypeScript, HTML, CSS.</br> Click to see more...</a>
+        </figure>
+        <figure>
+          <img src="./media/img/game-logo.png" alt="brain-burst proyect image">
+          <a href="https://pablohk.github.io/brain-trash/">Ironhack's first project. Works with JS, canvas and POO design.</br> Click to see more...</a>
+        </figure>
+        <figure>
+          <img src="./media/img/libros-felices-logo.png" alt="libros-felices proyect image">
+          <a href="#">A fully Web store using J2EE, Hibernate, POO programming and patterns design (MVC, Front-Controller, Factory)</br> Click to see more... </a>
+        </figure>
       </section>
       <!-- End proyect section  -->
-      <!-- Start skill section -->
-      <section id="skill">
-        <p id="goals">I am looking for a job where I can apply, consolidate and enlarge my current knowledge into the programming industry. Help towards the success of the company with my experience and professional skill.
-        </p>
-      </section>
-      <!-- End skill section -->
+    </main>
+    <!-- End main -->
+    <!-- Start footer -->
+    <footer>
       <!-- Start contact section -->
       <section id="contact" class="horizontal-list">
         <img id="p-photo" src="./media/img/pphoto.jpg" alt="Peronal Photo">
-        <article class="">
+        <article>
           <p><i class="fa fa-user"></i>Pablo Carmona Torres</p>
           <p><i class="fa fa-phone"></i>+34 654 84 07 09</p>
           <p><i class="fa fa-birthday-cake"></i>03th March 1978</p>
@@ -192,10 +192,6 @@
         </article>
       </section>
       <!-- End contact section -->
-    </main>
-    <!-- End main -->
-    <!-- Start footer -->
-    <footer>
       <nav class="horizontal-list">
         <a target="_blank" href="https://www.github.com/pablohk"><i class="fa fa-github-alt"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/pablo-carmona-torres"><i class="fa fa-linkedin"></i></a>
@@ -208,5 +204,4 @@
     <!-- End footer -->
   </div>
 </body>
-
 </html>
