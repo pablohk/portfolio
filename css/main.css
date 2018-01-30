@@ -24,7 +24,7 @@ i, strong {
   margin-right: 1em;
 }
 
-section, header{
+section, header {
   background-attachment: fixed;
   background-position: left center;
   background-size: cover;
@@ -59,15 +59,17 @@ section, header{
 }
 
 /* nav ---------------------------------------------------*/
+
 .nav-top {
   width: 100%;
   height: 3rem;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   overflow: hidden;
   top: 0;
   z-index: 100;
 }
+
 .nav-top a {
   padding: 1em;
   color: #FFF;
@@ -75,7 +77,7 @@ section, header{
 }
 
 .nav-top a.active {
-background-color: rgba(134,127,127,1);
+  background-color: rgba(134, 127, 127, 1);
 }
 
 /* header ------------------------------------------------*/
@@ -103,7 +105,8 @@ main {
 }
 
 /* skill section into main _____________________________*/
-#skill{
+
+#skill {
   background-image: url('../media/img/skill-BG.jpg');
   text-align: justify;
   width: 90%;
@@ -111,8 +114,8 @@ main {
 }
 
 #skill * {
-  color:#FFF;
-  margin-bottom:1%;
+  color: #FFF;
+  margin-bottom: 1%;
   line-height: 180%;
 }
 
@@ -152,7 +155,7 @@ main {
 /* experience section into main _____________________________*/
 
 #experience {
-background-image: url('../media/img/experience-BG.jpg');
+  background-image: url('../media/img/experience-BG.jpg');
 }
 
 .timeline {
@@ -255,7 +258,6 @@ background-image: url('../media/img/experience-BG.jpg');
   height: 14rem;
   position: relative;
   margin: 0 0 0.5rem 0;
-  /*padding: 0.5rem;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -265,7 +267,7 @@ background-image: url('../media/img/experience-BG.jpg');
 
 #proyect img {
   width: 100%;
-  object-fit:contain;
+  object-fit: contain;
 }
 
 #proyect figure a {
@@ -287,7 +289,9 @@ background-image: url('../media/img/experience-BG.jpg');
 }
 
 /* footer ------------------------------------------------*/
+
 /* footer height for mark Proyect and contact nav a*/
+
 footer {
   width: 100%;
   background-color: #000;
@@ -311,12 +315,13 @@ footer nav i:hover {
   text-align: center;
   padding: 2%;
 }
+
 /* contact section into footer _____________________________*/
 
 #contact {
   padding: 10px 0 10px 0;
   width: 100%;
-  border-bottom:2px solid #FFF;
+  border-bottom: 2px solid #FFF;
 }
 
 #contact article {
@@ -328,6 +333,7 @@ footer nav i:hover {
   border-radius: 50%;
   padding: 1%;
 }
+
 /* Responsive Media Queries --------------------------*/
 
 @media only screen and (min-width: 481px) and (max-width:767px) {
@@ -370,4 +376,30 @@ footer nav i:hover {
   .content {
     width: 550px;
   }
+}
+
+@media only print {
+  html {
+    background-color: #FFF;
+    color: #000;
+  }
+  header, nav>*, .exp-show {
+    display: none;
+  }
+  .exp-list {
+    display: inline-block;
+  }
+  .tldate:nth-last-child(4) {
+    page-break-after: always;
+  }
+  figure>a:after {
+    content: attr(href);
+  }
+  #proyect>figure {
+    box-shadow: none;
+  }
+  #proyect figure a {
+    opacity: 1;
+  }
+
 }

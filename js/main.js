@@ -32,9 +32,9 @@ function showDetails() {
 }
 
 // Show  the Contact DOM elements
-function showContact() {
-  $('#contact').css('visibility', 'visible');
-}
+// function showContact() {
+//   $('#contact').css('visibility', 'visible');
+// }
 
 //  Change random 2 elements in array and show all of them on the front
 function mix() {
