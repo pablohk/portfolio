@@ -374,6 +374,13 @@ footer nav i:hover {
   html {
     font-size: 26px;
   }
+  .container{
+    width: 70%;
+    margin-left: 15%;
+  }
+  .nav-top{
+    width: 70%;
+  }
   .educa-cart img {
     width: 2.5em;
   }
