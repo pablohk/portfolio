@@ -3,9 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pablo Carmona Portfolio</title>
@@ -19,84 +16,46 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script> -->
 
   <!-- Custom files, css, js -->
-  <link rel="stylesheet" href="./css/normalize.css" type="text/css">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/main.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <!-- Start nav -->
-    <nav class="horizontal-list nav-top">
-      <a href="#skill">Skill</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#proyect">Proyect</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <!-- End nav -->
     <!-- Start header -->
     <header>
-      <section class="horizontal-list">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-        <img class="logo" src="" alt="random carousel image">
-      </section>
+      <!-- Start nav -->
+      <nav class="flex-row  nav-top">
+        <a href=".skill">Skill</a>
+        <a href=".education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#proyect">Proyect</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- End nav -->
+      <section class="logos flex-row "></section>
     </header>
     <!-- End header -->
+
     <!-- Start main -->
     <main>
       <!-- Start skill section -->
-      <section id="skill">
-        <h3>I am looking for new experiences where I can apply,
-           consolidate and enlarge my current knowledge into the programming
-           industry. Help towards the success of the company with my experience
-           and professional skill.
+      <section class="skill">
+        <h3>Full stack Developer and I am looking for new experiences where I can apply,
+          consolidate and enlarge my current knowledge into the programming
+          industry. Help towards the success of the company with my experience
+          and professional skill.
         </h3>
-        <p> </p>
       </section>
       <!-- End skill section -->
+
       <!-- Start education section -->
-      <section id="education" class="horizontal-list">
-        <article class="educa-cart">
-          <h5>2017</h5>
-          <img src="./media/img/ironhacklogo.png" alt="img">
-          <div class="content">
-            <p><strong>Title:</strong>Full Stack web Developer</p>
-            <p><strong>College:</strong>Ironhack</p>
-            <p><strong>City:</strong>Madrid</p>
-            <p><strong>Desciption:</strong>A 8 weeks bootcamp learning MEAN Stack and teamwork performance (Git, Github)</p>
-          </div>
-        </article>
-        <article class="educa-cart">
-          <h5>2013-2014</h5>
-          <img src="./media/img/oracle_professional.png" alt="img">
-          <div class="content">
-            <p><strong>Title:</strong>JAVA applications Development</p>
-            <p><strong>College:</strong>Oracle & FSC.Inserta</p>
-            <p><strong>City:</strong>Madrid</p>
-            <p><strong>Desciption:</strong>780 h course learning Java,Java Web, MVC pattern, Hibernate and Spring </p>
-          </div>
-        </article>
-        <article class="educa-cart">
-          <h5>1998-2005</h5>
-          <img src="./media/img/euitt.png" alt="img">
-          <div class="content">
-            <p><strong>Title:</strong>Grade in telecommunications</p>
-            <p><strong>College:</strong>UPM</p>
-            <p><strong>City:</strong>Madrid</p>
-            <p><strong>Desciption:</strong>Telecommunications System, focused in broadcasting antenna systems</p>
-          </div>
-        </article>
-      </section>
+      <div class="education-bg paralax"></div>
+      <section class="education flex-row"></section>
       <!-- End education section  -->
+
       <!-- Start experience section -->
+      <!-- <div class="experience-bg paralax"></div>
       <section id="experience">
         <ul class="timeline">
           <li class="tldate">2016</li>
@@ -109,7 +68,8 @@
               <p>Evaluate Coverages, radiations patterns and radio-Links.</p>
               <p>Prepare technical data for economic offers, tenders and on-site layout.</p>
               <p>P.I.M measurements in mobile antennas systems (3G/4G.)</p>
-              <p>Perform, supervise and carry out radio communications equipment installations both at the national and international levels.</p>
+              <p>Perform, supervise and carry out radio communications equipment installations both at the national and
+                international levels.</p>
               <p>Technical advisor. Give training courses to clients.</p>
               <p>Measurement protocol, tests and quality control for filters, combiners and antennas.</p>
             </div>
@@ -135,7 +95,8 @@
               <p>Evaluate Coverages, radiations patterns and radio-Links.</p>
               <p>Prepare technical data for economic offers, tenders and on-site layout.</p>
               <p>Design and Draw plans of pieces in order to make new products.</p>
-              <p>Perform, supervise and carry out radio communications equipment installations both at the national and international levels.</p>
+              <p>Perform, supervise and carry out radio communications equipment installations both at the national and
+                international levels.</p>
               <p>Technical advisor. Give training courses to clients.</p>
               <p>Measurement protocol, tests and quality control for filters, combiners and antennas.</p>
             </div>
@@ -159,31 +120,36 @@
           </li>
           <li class="tldate">2003</li>
         </ul>
-      </section>
+      </section> -->
       <!-- End experience section  -->
+      
       <!-- Start proyect section  -->
-      <section id="proyect" class="horizontal-list">
+      <!-- <section id="proyect" class="horizontal-list">
         <h2>PROYECTS</h2>
         <figure>
           <img src="./media/img/photo-fishing-logo.png" alt="photo-fishing proyect image">
-          <a href="https://photo-fishing.herokuapp.com">Ironhack's final project. A MBP responsive web design using all acquired knowledges: Angular, Node, ExpressJs, API's, TypeScript, HTML, CSS.</br> Click to see more...</a>
+          <a href="https://photo-fishing.herokuapp.com">Ironhack's final project. A MBP responsive web design using all
+            acquired knowledges: Angular, Node, ExpressJs, API's, TypeScript, HTML, CSS.</br> Click to see more...</a>
         </figure>
         <figure>
           <img src="./media/img/game-logo.png" alt="brain-burst proyect image">
-          <a href="https://pablohk.github.io/brain-trash/">Ironhack's first project. Works with JS, canvas and POO design.</br> Click to see more...</a>
+          <a href="https://pablohk.github.io/brain-trash/">Ironhack's first project. Works with JS, canvas and POO
+            design.</br> Click to see more...</a>
         </figure>
         <figure>
           <img src="./media/img/libros-felices-logo.png" alt="libros-felices proyect image">
-          <a href="#">A fully Web store using J2EE, Hibernate, POO programming and patterns design (MVC, Front-Controller, Factory)</br> Click to see more... </a>
+          <a href="#">A fully Web store using J2EE, Hibernate, POO programming and patterns design (MVC,
+            Front-Controller, Factory)</br> Click to see more... </a>
         </figure>
-      </section>
+      </section> -->
       <!-- End proyect section  -->
     </main>
     <!-- End main -->
+    
     <!-- Start footer -->
     <footer>
       <!-- Start contact section -->
-      <section id="contact" class="horizontal-list">
+      <!-- <section id="contact" class="horizontal-list">
         <img id="p-photo" src="./media/img/pphoto.jpg" alt="Peronal Photo">
         <article>
           <p><i class="fa fa-user"></i>Pablo Carmona Torres</p>
@@ -191,18 +157,19 @@
           <p><i class="fa fa-birthday-cake"></i>03th March 1978</p>
           <p><i class="fa fa-envelope-o"></i>carmona_torres@wanadoo.es</p>
         </article>
-      </section>
+      </section> -->
       <!-- End contact section -->
-      <nav class="horizontal-list">
+      <!-- <nav class="horizontal-list">
         <a target="_blank" href="https://www.github.com/pablohk"><i class="fa fa-github-alt"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/pablo-carmona-torres"><i class="fa fa-linkedin"></i></a>
         <a href="#"><i class="fa fa-envelope-o"></i></a>
-      </nav>
-      <section class="copyright">
+      </nav> -->
+      <!-- <section class="copyright">
         <p><i class=" fa fa-copyright"></i>Pablohk 2018. All Rights Reserved</p>
-      </section>
+      </section> -->
     </footer>
     <!-- End footer -->
   </div>
 </body>
+
 </html>
