@@ -535,6 +535,7 @@ $(document).ready(function() {
   loadEducation(lang);
   loadExperience(lang);
   loadProject(lang);
+  handleCollapseMenu();
 
   // Update the logos img each 2 seconds
   let Idmix = setInterval(mix, 1000 * 1.5);
@@ -582,7 +583,11 @@ function loadLogos() {
 }
 
 function loadNavLinks(lang){
-  $('.nav-top .flex-row >a').text( (idx)=>{
+  $('.normal >a').text( (idx)=>{
+    const text =navLinks[lang][idx];
+    return text;
+  });
+  $('.collapse nav >a').text( (idx)=>{
     const text =navLinks[lang][idx];
     return text;
   });
@@ -677,7 +682,8 @@ function loadProject(lang){
 
 function markNavlink() {
   let sections = $('section');
-  let nav = $('nav.flex-row');
+  let nav = $('.normal');
+  let nav_collapse = $('.collapse nav');
 
   $(window).on('scroll', function() {
     let cur_pos = $(this).scrollTop();
@@ -687,8 +693,10 @@ function markNavlink() {
       let bottom = top + $(this).height();
       if (cur_pos >= top && cur_pos <= bottom) {
         nav.find('a').removeClass('active');
+        nav_collapse.find('a').removeClass('active');
         let name = $(this).attr('class').split(' ')[0].toLowerCase();
         nav.find('a[href="#' + name + '"]').addClass('active');
+        nav_collapse.find('a[href="#' + name + '"]').addClass('active');
       }
     });
   });
@@ -721,5 +729,16 @@ function handleLang(lang){
     loadExperience(lang);
     showDetails(lang);
     loadProject(lang);
+  });
+}
+
+function  handleCollapseMenu(){
+  $('.collapse i').click(function (e){
+    e.preventDefault();
+    $(this).next().toggle();
+  });
+  $('.collapse nav >a').click(function (e){
+    e.preventDefault();
+    $('.collapse nav').toggle();
   });
 }

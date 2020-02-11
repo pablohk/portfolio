@@ -29,11 +29,18 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
+}
+
+.flex-column{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .hidden{
-  display: none;
+  display: none !important;
 }
 
 .paralax {
@@ -44,6 +51,16 @@ body {
 }
 
 /* Start header section _____________________________*/
+.collapse i{
+  color:white;
+  cursor:pointer;
+  padding:20px;
+}
+
+.normal{
+  display:none;
+}
+
 .nav-top{
   width:100%;
   background-color: rgba(0, 0, 0, 1);
@@ -54,21 +71,27 @@ body {
   display:flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  border-bottom: 1px solid white;
 }
 
-.nav-top .flex-row > a{
+.normal > a, .collapse nav > a{
   display:block;
   color: white !important;
   margin:0 10px;
   padding: 10px 10px 20px;
   cursor: pointer;
+  font-size: 12px;
 }
 
-.nav-top .flex-row > a:hover{
-  background-color: #FD3D50;
+.collapse nav > a{
+  font-size: 16px !important;
 }
 
-.nav-top .flex-row a.active {
+.collapse nav {
+  display:none;
+}
+
+.normal a.active, .collapse nav a.active  {
   background-color: #FD3D50;
 }
 
@@ -284,6 +307,53 @@ body {
 }
 /* End proyect section _____________________________*/
 
+/* Start footer _____________________________*/
+
+footer {
+  width: 100%;
+  background-color: #000;
+  height: 100vh;
+}
+
+footer p, footer i {
+  color: #fff;
+}
+
+footer i {
+  margin-right: 15px;
+}
+
+footer nav {
+  width: 100%;
+  padding-top: 1em;
+}
+
+footer nav i:hover {
+  color: #d60606;
+}
+
+.copyright {
+  text-align: center;
+  padding: 2%;
+}
+
+.contact {
+  padding: 10px 0 10px 0;
+  width: 100%;
+  border-bottom: 2px solid #FFF;
+}
+
+.contact article {
+  line-height: 25px;
+}
+
+#p-photo {
+  width: 7em;
+  border-radius: 50%;
+  padding: 1%;
+}
+/* End footer _____________________________*/
+
 
 /* Media Queries -------------------------------------------------------------- */
 @media only screen and (max-width:450px){
@@ -297,7 +367,6 @@ body {
   .educa-content {
     width:90%;
   } 
-  
 }
 
 @media only screen and (min-width:420px){
@@ -305,5 +374,16 @@ body {
     line-height: 40px;
     font-size: 20px;
   }
+}
 
+@media only screen and (min-width:580px){
+  .normal > a{
+    font-size: 16px;
+  }
+  .collapse{
+    display:none;
+  }
+  .normal{
+    display:flex;
+  }
 }

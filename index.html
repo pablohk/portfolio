@@ -13,7 +13,6 @@
   <script src="./lib/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="./media/fonts/font-awesome-4.7.0/font-awesome.css" type="text/css">
   <!-- Lodash Library -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script> -->
 
   <!-- Custom files, css, js -->
   <link rel="stylesheet" href="./css/main.css">
@@ -25,13 +24,23 @@
     <!-- Start header -->
     <header>
       <div class="nav-top">
-        <nav class="flex-row">
+        <nav class="flex-row normal">
           <a href="#skill">Skill</a>
           <a href="#education">Education</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <div class="flex-column collapse">
+          <i class="fa fa-2x fa-bars"></i>
+          <nav class="flex-column">
+            <a href="#skill">Skill</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
         <section class="flags">
           <img src="./media/img/es_flag.png" alt="es_flag"/>
           <img src="./media/img/en_flag.png" alt="en_flag"/>
@@ -65,24 +74,24 @@
     <!-- Start footer -->
     <footer>
       <!-- Start contact section -->
-      <!-- <section id="contact" class="horizontal-list">
+      <section class="contact flex-row">
         <img id="p-photo" src="./media/img/pphoto.jpg" alt="Peronal Photo">
         <article>
           <p><i class="fa fa-user"></i>Pablo Carmona Torres</p>
           <p><i class="fa fa-phone"></i>+34 654 84 07 09</p>
           <p><i class="fa fa-birthday-cake"></i>03th March 1978</p>
-          <p><i class="fa fa-envelope-o"></i>carmona_torres@wanadoo.es</p>
+          <p><i class="fa fa-envelope-o"></i>pablocarmonatorresfs@gmail.com</p>
         </article>
       </section> -->
       <!-- End contact section -->
-      <!-- <nav class="horizontal-list">
+      <nav class="flex-row">
         <a target="_blank" href="https://www.github.com/pablohk"><i class="fa fa-github-alt"></i></a>
         <a target="_blank" href="https://www.linkedin.com/in/pablo-carmona-torres"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-envelope-o"></i></a>
-      </nav> -->
-      <!-- <section class="copyright">
+        <a href="mailto:pablocarmonatorresfs@gmail.com"><i class="fa fa-envelope-o"></i></a>
+      </nav>
+      <section class="copyright">
         <p><i class=" fa fa-copyright"></i>Pablohk 2018. All Rights Reserved</p>
-      </section> -->
+      </section>
     </footer>
     <!-- End footer -->
   </div>
