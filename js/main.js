@@ -15,6 +15,25 @@ const logoPath = [
   { src: "./media/img/gcloud-logo.png", title:"Google Cloud"},
 ];
 
+const navLinks ={
+  es:[ 'Perfil','Educación', 'Experiencia', 'Proyectos', 'Contacto'],
+  en:[ 'Skill', 'Education', 'Experience', 'Projects', 'Contact']
+};
+
+const skill ={
+  es:[
+    `Hola, soy desarrollador Full stack y me paso el día pensando en NodeJs, ReactJs ...`,
+    `La programación es mi mundo Mátrix.`,
+    `Así que si estás buscando un desarrollador para tu equipo/empresa con sólidos conocimientos en el Front y en el Back, estaría
+    encantado en conocerte.`
+  ],  
+  en:[
+    `Hy, I'm Full stack Developer and spend all my time thinking about NodeJs, ReactJs ...`,
+    `Programming is my own Matrix world.`,
+    `So if you're looking for a developer for you team/company with solid programming background in Front / Back , i´d love to meet you.`
+  ]
+};
+
 const education = [
   {
     logo: "./media/img/ironhacklogo.png",
@@ -153,28 +172,394 @@ const education = [
   }
 ];
 
+const experience = [
+  {
+    date: '2020',
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value:{
+        es:'Desarrolador full stack junior.',
+        en:'Junior full stack Developer.'
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value:{
+        es:'Innobotive s.l.',
+        en:'Innobotive s.l.'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration:'
+      },
+      value:{
+        es:'2 años.',
+        en:'2 years.'
+      }
+    },
+    more:{ 
+      es:'Más detalles...' , 
+      en:'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details:{
+      es:[
+        'Desarrollo de la arquitectura API en el back con NodeJs ES6, expressJs, socket.io.',
+        'Desarrollo del front con React, HTML5 y CSS3.',
+        'Gestión y mantenimiento del código.',
+        'Base de datos MongoDb: CRUD y queries relacionando varias colecciones.',
+        'Despliegue en Heroku y google App engine.',
+        'Control de versiones con Git.',
+        'Metodología ágil de trabajo Scrum con trello.'],
+      en:[
+        'Develop API architecture in back, using NodeJs ES6, expressJs and socket.io.',
+        'Front Develop, using ReactJs, HTML5 and CSS3.',
+        'Code management and maintenance.',
+        'MongoDb as BBDD: CRUD and related queries.',
+        'Deployments in Heroku and google App engine',
+        'Git as version Control code',
+        'Scrum as agile methodology, using Trello'
+      ]
+    }
+  },
+  {
+    date:'2018'
+  },
+  {
+    date: '2016',
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value: {
+        es: 'Ingeniero Broadcasting.',
+        en: 'Broadcat Engineering.'
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value: {
+        es: 'Sistemas Radiantes F.Moyano.',
+        en: 'Sistemas Radiantes F.Moyano.'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration:'
+      },
+      value: {
+        es: '2 años.',
+        en: '2 years.'
+      }
+    },
+    more: {
+      es: 'Más detalles...',
+      en: 'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details: {
+      es: [
+        'I+D+I dispositivos coaxiales y sistemas radiantes en B.I, F.M., D.A.B, y U.H.F.',
+        'Estudios de cobertura, diagramas de radiación y radio enlaces.',
+        'Preparar documentaciones técnicas para ofertas, licitaciones y replanteos.',
+        'Medidas de P.I.M en antenas de telefonía móvil 3G/4G.',
+        'Puesta en marcha y supervisión de obra en instalaciones de equipos de radiocomunicación a nivel nacional e internacional.',
+        'Asesor técnico e impartición de cursos a los clientes.',
+        'Protocolo de medidcas, test y control de calidad de filtros, multiplexores y antenas.'
+      ],
+      en: [
+        'I+D+I coaxial devices and radiant systems. Frequency Bands: B.I, F.M., D.A.B y U.H.F.',
+        'Evaluate Coverages, radiations patterns and radio-Links.',
+        'Prepare technical data for economic offers, tenders and on-site layout.',
+        'P.I.M measurements in mobile antennas systems (3G/4G.)',
+        'Perform, supervise and carry out radio communications equipment installations both at the national andinternational levels.',
+        'Technical advisor. Give training courses to clients.',
+        'Measurement protocol, tests and quality control for filters, combiners and antennas.'
+      ]
+    }
+  },
+  {
+    date: '2014',
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value: {
+        es: 'Becario en Java',
+        en: 'Java InternalShip'
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value: {
+        es: 'Accenture - Coritel.',
+        en: 'Accenture - Coritel.'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration: '
+      },
+      value: {
+        es: '1 mes',
+        en: '2 month'
+      }
+    },
+    more: {
+      es: 'Más detalles...',
+      en: 'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details: {
+      es: [
+        'Generación de scripts Unix / SQL.',
+      ],
+      en: [
+        'Develop Unix / SQL scripts.'
+      ]
+    }
+  },
+  {
+    date: '2012',
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value: {
+        es: 'Responsable departamento Broadcast.',
+        en: 'Head broadcast department'
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value: {
+        es: 'Vídeo Medios S.A',
+        en: 'Vídeo Medios S.A'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration: '
+      },
+      value: {
+        es: '6 años',
+        en: '6 years'
+      }
+    },
+    more: {
+      es: 'Más detalles...',
+      en: 'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details: {
+      es: [
+        'I+D+I dispositivos coaxiales y sistemas radiantes en B.I, F.M., D.A.B, y U.H.F',
+        'Estudios de cobertura, diagramas de radiación y radio enlaces',
+        'Preparar documentaciones técnicas para ofertas, licitaciones y replanteos',
+        'Diseño y generación de planos de las piezas diseñadas para los nuevos productos',
+        'Puesta en marcha y supervisión de obra en instalaciones de equipos de radiocomunicación a nivel nacional e internacional',
+        'Asesor técnico e impartición de cursos a los clientes',
+        'Protocolo de medidcas, test y control de calidad de filtros, multiplexores y antenas'
+      ],
+      en: [
+        'I+D+I coaxial devices and radiant systems. Frequency Bands: B.I, F.M., D.A.B y U.H.F.',
+        'Evaluate Coverages, radiations patterns and radio-Links.',
+        'Prepare technical data for economic offers, tenders and on-site layout.',
+        'Design and Draw plans of pieces in order to make new products.',
+        'Perform, supervise and carry out radio communications equipment installations both at the national andinternational levels.',
+        'Technical advisor. Give training courses to clients.',
+        'Measurement protocol, tests and quality control for filters, combiners and antennas.'
+      ]
+    }
+  },
+  {
+    date:'2005'
+  },
+  {
+    date: '2004',
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value: {
+        es: 'Analista de telecomunicaciones',
+        en: "Telecom's Analyst"
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value: {
+        es: 'Sistemas Radiantes F.Moyano',
+        en: 'Sistemas Radiantes F.Moyano'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration: '
+      },
+      value: {
+        es: '1 año.',
+        en: '1 year.'
+      }
+    },
+    more: {
+      es: 'Más detalles...',
+      en: 'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details: {
+      es: [
+        'I+D+I dispositivos coaxiales y sistemas radiantes en B.I, F.M., D.A.B, y U.H.F.',
+        'Estudios de cobertura, diagramas de radiación y radio enlaces.',
+        'Preparar documentaciones técnicas para ofertas, licitaciones y replanteos',
+        'Puesta en marcha y supervisión de obra en instalaciones de equipos de radiocomunicación.',
+        'Asesor técnico.',
+        'Protocolo de medidcas, test y control de calidad de filtros, multiplexores y antenas.'
+      ],
+      en: [
+        'I+D+I coaxial devices and radiant systems. Frequency Bands: B.I, F.M., D.A.B y U.H.F.',
+        'Evaluate Coverages, radiations patterns and radio-Links.',
+        'Prepare technical data for economic offers, tenders and on-site layout.',
+        'Perform, supervise and carry out radio communications equipment installations.',
+        'Technical advisor.',
+        'Measurement protocol, tests and quality control for filters, combiners and antennas.'
+      ]
+    }
+  },
+  {
+    date: '2003',
+  },
+];
+
+const project = [
+  {
+    img: './media/img/dietame-logo.png',
+    alt: {
+      es: 'dietame.com',
+      en: 'dietame.com'
+    },
+    url: 'https://dietame.com',
+    description: {
+      es: `Asesor nutricional virtual. Portal web y chatbot: NodeJs, ExpressJs, ReactJs, API restful`,
+      en: `Virtual nutritionist Adviser. Web and chatbot: NodeJs, ExpressJs, ReactJs, API restful`
+    }
+  },
+  {
+    img: './media/img/photo-fishing-logo.png',
+    alt: {
+      es: 'Proyecto Photo-fishing',
+      en: 'Photo-fishing Project'
+    },
+    url: 'https://photo-fishing.herokuapp.com',
+    description: {
+      es: `Proyecto final de Ironhack. MBP diseño web usando todos los conocimientos aprendidios: AngularJs, NodeJs, ExpressJs, API's, TypeScript, HTML5, CSS3.`,
+      en: `Ironhack's final project.
+     A MBP responsive web design using all acquired knowledges: AngularJs, NodeJs, ExpressJs, API's, TypeScript, HTML5, CSS3.`
+    }
+  },
+  {
+    img: './media/img/game-logo.png',
+    alt: {
+      es: 'Proyecto brain-trash',
+      en: 'brain-trash Project'
+    },
+    url: 'https://pablohk.github.io/brain-trash',
+    description: {
+      es: `Primer Proyecto de Ironhack. Trabajando con Js, canvas y programación POO`,
+      en: `Ironhack's first project. Works with JS, canvas and POO programming.`
+    }
+  },
+  {
+    img: './media/img/libros-felices-logo.png',
+    alt: {
+      es: 'Proyecto libros-felices',
+      en: 'libros-felices Project'
+    },
+    url: '#',
+    description: {
+      es: `Web ventas usando J2EE,Hibernate, POO programming y patrones de diseño (MVC,Front-Controller, Factory)`,
+      en: `A fully Web store using J2EE, Hibernate, POO programming and patterns design (MVC,Front-Controller, Factory)`
+    }
+  }
+];
+
 $(document).ready(function() {
+  let lang=$('#lang').text().toLowerCase();
+
   loadLogos();
-  loadEducation();
+  loadNavLinks(lang);
+  loadSkill(lang);
+  loadEducation(lang);
+  loadExperience(lang);
+  loadProject(lang);
+
   // Update the logos img each 2 seconds
   let Idmix = setInterval(mix, 1000 * 1.5);
-  showDetails();
+  showDetails(lang);
   markNavlink();
   scrollToSection();
+  handleLang();
   // END document ready
 });
 
 // Show / hide  the previous DOM elements of clicked element
-function showDetails() {
+function showDetails(lang) {
   $('.exp-show').click(function(e) {
     e.preventDefault();
     let el = $(this).text();
-    el = el === "Show details......" ? "Hide......" : "Show details......";
-    $(this).html(el);
+    if(lang ==='es'){
+      el = el === "Más detalles..." ? "Ocultar..." : "Más detalles...";
+    }
+    else{
+      el = el === "More details..." ? "Hide..." : "More details...";
+    }
+    $(this).html(`<p class="exp-show"><strong>${el}</strong></p>`);
     $(this).prev().toggle();
   });
 }
-
 
 //  Change random 2 elements in array and show all of them on the front
 function mix() {
@@ -196,39 +581,24 @@ function loadLogos() {
     });
 }
 
-function markNavlink() {
-  let sections = $('section'),nav = $('.nav-top');
-  $(window).on('scroll', function() {
-    let cur_pos = $(this).scrollTop();
-    sections.each(function() {
-      nav_height = nav.height();
-      let top = $(this).offset().top - nav_height,
-        bottom = top + $(this).height();
-      if (cur_pos >= top && cur_pos <= bottom) {
-        nav.find('a').removeClass('active');
-        let id = $(this).text().toLowerCase();
-        nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-      }
-    });
+function loadNavLinks(lang){
+  $('.nav-top .flex-row >a').text( (idx)=>{
+    const text =navLinks[lang][idx];
+    return text;
   });
 }
 
-function scrollToSection() {
-  let navLink = $('.nav-top a');
-  navLink.each(function() {
-    $(this).click(function(e) {
-      e.preventDefault();
-      let nav_height=$('.nav-top').height();
-      let id = '#'.concat($(this).text().toLowerCase());
-      $('html,body').animate({
-        scrollTop:$(id).offset().top-nav_height+2},2000);
-    });
+function loadSkill(lang){
+  $('.skill >p').remove();
+
+  skill[lang].forEach(e=>{
+    const element = $(`<p>${e}</p>`);
+    $('.skill').append(element);
   });
 }
 
-function loadEducation(){
-  const lang = 'en';
-
+function loadEducation(lang){
+  $('.educa-cart').remove();
   education.forEach(e=>{
     let article_el = $('<article class="educa-cart flex-row">');
     let content_el = $('<div class="educa-content"></div>');
@@ -252,5 +622,104 @@ function loadEducation(){
     $(article_el)
       .append(logo_el)
       .append(content_el);
+  });
+}
+
+function loadExperience(lang){
+  $('.timeline').remove();
+  let ul_el = $('<ul class="timeline">');
+  experience.forEach(e=>{
+    let li_tldate_el= $(`<li class="tldate">${e.date}</li>`);
+    let li_panel_el = null;
+
+    if(e.role){
+      let role_el = $(`<h4><spam>${e.role.key[lang]}</spam> ${e.role.value[lang]}</h4>`);
+      let company_el= $(`<p><spam>${e.company.key[lang]}</spam> ${e.company.value[lang]}</p>`);
+      let duration_el= $(`<pclass="duration"><spam>${e.duration.key[lang]}</spam> ${e.duration.value[lang]}</p>`);
+      let show_more_el =$(`<p class="exp-show"><strong>${e.more[lang]}</strong></p>`);
+
+      let exp_list_el= $(`<div class="exp-list"></div>`);
+      e.details[lang].forEach( el=>{
+        let element =$(`<p>${el}</p>`);
+        $(exp_list_el).append(element);
+      });
+
+      li_panel_el= $(`<li class="timeline-panel"></li>`);
+
+      $(li_panel_el)
+      .append(role_el)
+      .append(company_el)
+      .append(duration_el)
+      .append(exp_list_el)
+      .append(show_more_el);
+    }
+
+    $(ul_el).append(li_tldate_el);
+    if(li_panel_el) $(ul_el).append(li_panel_el);
+
+    $(ul_el).appendTo('.experience');
+  });
+}
+
+function loadProject(lang){
+  $('.projects >figure').remove();
+  project.forEach(e=>{
+    const figure_el = $(`<figure></figure>`);
+    const img_el = $(`<img src = '${e.img}' alt=${e.alt[lang]}/>`);
+    const url_el = $(`<a href=${e.url} ${e.url !=='#' ? 'target=_blank"' : null}>${e.description[lang]}</a>`);
+    $(figure_el)
+      .append(img_el)
+      .append(url_el);
+
+    $(figure_el).appendTo('.projects');
+  });
+}
+
+function markNavlink() {
+  let sections = $('section');
+  let nav = $('nav.flex-row');
+
+  $(window).on('scroll', function() {
+    let cur_pos = $(this).scrollTop();
+    sections.each(function() {
+      nav_height = nav.height();
+      let top = $(this).offset().top - nav_height;
+      let bottom = top + $(this).height();
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('a').removeClass('active');
+        let name = $(this).attr('class').split(' ')[0].toLowerCase();
+        nav.find('a[href="#' + name + '"]').addClass('active');
+      }
+    });
+  });
+}
+
+function scrollToSection() {
+  let navLink = $('.nav-top a');
+  navLink.each(function() {
+    $(this).click(function(e) {
+      e.preventDefault();
+      let nav_height=$('.nav-top').height();
+      let link = $(this).attr('href').toLowerCase();
+      let cla = '.'.concat(link.slice(1));
+      $('html,body').animate({
+        scrollTop:$(cla).offset().top-nav_height+2},1000);
+    });
+  });
+}
+
+function handleLang(lang){
+  $(".flags >img").click( e=>{
+    let alt= e.target.alt;
+    lang= alt ==="es_flag" ? "es" : "en";
+
+    $('#lang').text(lang);
+
+    loadNavLinks(lang);
+    loadSkill(lang);
+    loadEducation(lang);
+    loadExperience(lang);
+    showDetails(lang);
+    loadProject(lang);
   });
 }

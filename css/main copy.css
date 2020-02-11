@@ -202,6 +202,7 @@ main {
   color: #FFF;
   font-weight: bold;
   text-align: center;
+  box-shadow:  0 0 17px rgba(221, 0, 0, 0.83);
   -webkit-box-shadow: 0 0 17px rgba(221, 0, 0, 0.83);
 }
 

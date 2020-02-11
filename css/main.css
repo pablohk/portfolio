@@ -22,20 +22,107 @@ body {
 /* ------------------------------------------------------------- */
 .container{
   width:100%;
+  overflow: hidden;
 }
 
+.flex-row{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.hidden{
+  display: none;
+}
+
+.paralax {
+  background-attachment: fixed;
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+}
+
+/* Start header section _____________________________*/
+.nav-top{
+  width:100%;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.nav-top .flex-row > a{
+  display:block;
+  color: white !important;
+  margin:0 10px;
+  padding: 10px 10px 20px;
+  cursor: pointer;
+}
+
+.nav-top .flex-row > a:hover{
+  background-color: #FD3D50;
+}
+
+.nav-top .flex-row a.active {
+  background-color: #FD3D50;
+}
+
+.flags{
+  margin-right: 5px;
+  padding-top:5px;
+}
+
+.flags >img{
+  width:30px;
+  cursor:pointer;
+}
+
+.logos{
+  width: 95%;
+  margin:90px auto 20px;
+}
+
+.logos > *{
+  width: 12%;
+  padding: 0.6em;
+}
+/* End header section _____________________________*/
+
+/* Start skill section _____________________________*/
+.skill{
+  padding: 80px 0px;
+  text-align: justify;
+  line-height: 23px;
+}
+
+.skill >p{
+  width:80%;
+  margin:0 auto;
+  color: whitesmoke;
+}
+
+.skill-bg {
+  background-image: url('../media/img/skill-BG.jpg');
+}
+/* End skill section _____________________________*/
+
+/* Start education section _____________________________*/
 .education-bg {
   background-image: url('../media/img/education-BG.jpg');
 }
 
 .education{
-  width:90%;
-  margin: 0 auto;
   padding: 30px 10px;
 }
 
 .educa-cart {
-  box-shadow: 3px 3px 10px 5px #985f69, 0 0 4px rgba(0, 0, 0, .5) inset;
+  background-color: whitesmoke;
+  border-radius: 10px;
   padding: 20px 5px;
   margin:15px;
   width:450px;
@@ -61,63 +148,144 @@ body {
   margin-bottom: 10px;
   color:black;
 }
+/* End education section _____________________________*/
+
+/* Start experience section _____________________________*/
+.experience{
+  padding-top: 50px;
+}
 
 .experience-bg {
-  background-image: url('../media/img/skill-BG.jpg');
+  background-image: url('../media/img/experience-BG.jpg');
 }
 
-.flex-row{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: stretch;
+.timeline {
+  list-style: none;
+  margin-left: 5rem;
+  border-left: 5px solid black;
+  padding: 1rem 0;
 }
 
-.logos{
-  width: 95%;
-  margin:90px auto 20px;
+.tldate {
+  display: block;
+  width: 70px;
+  margin-left: -1rem;
+  padding: 0.5rem;
+  background-color: #d60606;
+  border: 1px solid #000;
+  border-radius: 50%;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
 }
 
-.logos > *{
-  width: 12%;
-  padding: 0.6em;
+.timeline li {
+  margin-bottom: 1.5rem;
 }
 
-.nav-top{
-  width:100%;
-  background-color: rgba(0, 0, 0, 1);
-  position: fixed;
-  top: 0;
-  overflow: hidden;
-  z-index: 100;
+.timeline-panel {
+  width: 70%;
+  position: relative;
+  padding: 1rem;
+  margin-left: 1.3rem;
+  background-color: #fff;
+  border: 1px solid #d60606;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
+  -moz-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
+  box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
 }
 
-.nav-top > a{
-  display:block;
-  color: white !important;
-  padding:20px 10px;
+.timeline-panel:before {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  left: -1.3rem;
+  border-top: 1.3rem solid transparent;
+  border-right: 1.3rem solid #d60606;
+  border-bottom: 1.3rem solid transparent;
+  content: " ";
+}
+
+.timeline-panel h4 {
+  margin: 0;
+  color: #03715e;
+}
+
+.duration, .timeline-panel h4, .timeline-panel h4+p {
+  padding-right: 0.5rem;
+}
+
+.exp-show{
+  padding-top:10px;
+}
+
+.exp-show :hover {
+  color: #d60606;
   cursor: pointer;
 }
 
-.nav-top > a:hover{
-  background-color: #FD3D50;
-}
-
-.paralax {
-  background-attachment: fixed;
-  background-position: left center;
-  background-size: cover;
-  width: 100%;
-  min-height: 40vh;
-}
-
-.skill{
-  text-align: justify;
+.exp-list {
+  display: none;
   width: 90%;
-  margin: 0 auto;
-  padding:10px;
+  margin-left: 5%;
 }
 
+.exp-list>p::before {
+  content: "-";
+  padding-right: 0.5rem;
+}
+
+/* End experience section _____________________________*/
+
+/* Start proyect section _____________________________*/
+.projects-bg {
+  background-image: url('../media/img/proyect-BG.jpg');
+}
+
+.projects{
+  padding:40px 0px;
+}
+
+.projects  > figure {
+  width: 14rem;
+  height: 14rem;
+  position: relative;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.projects  > figure:hover a {
+  opacity: 0.8;
+}
+
+.projects > figure > img {
+  width: 100%;
+}
+
+.projects > figure > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+  opacity: 0;
+  color: #fff;
+  background: #000;
+  -webkit-transition: opacity 800ms;
+  -moz-transition: opacity 800ms;
+  -o-transition: opacity 800ms;
+  transition: opacity 800ms;
+  text-align: justify;
+  line-height: 25px;
+}
+/* End proyect section _____________________________*/
+
+
+/* Media Queries -------------------------------------------------------------- */
 @media only screen and (max-width:450px){
   .educa-cart {
      display: flex;
@@ -130,4 +298,12 @@ body {
     width:90%;
   } 
   
+}
+
+@media only screen and (min-width:420px){
+  .skill {
+    line-height: 40px;
+    font-size: 20px;
+  }
+
 }
