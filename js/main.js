@@ -16,8 +16,8 @@ const logoPath = [
 ];
 
 const navLinks ={
-  es:[ 'Perfil','Educación', 'Experiencia', 'Proyectos', 'Contacto'],
-  en:[ 'Skill', 'Education', 'Experience', 'Projects', 'Contact']
+  es:[ 'Perfil','Educación', 'Experiencia', 'Proyectos', 'Aportaciones', 'Contacto'],
+  en:[ 'Skill', 'Education', 'Experience', 'Projects', 'Contributions', 'Contact']
 };
 
 const skill ={
@@ -173,6 +173,66 @@ const education = [
 ];
 
 const experience = [
+  {
+    date: null,
+    role: {
+      key: {
+        es: 'Rol:',
+        en: 'Role:'
+      },
+      value:{
+        es:'Desarrolador Senior Frontend.',
+        en:'Senior Frontend Developer.'
+      }
+    },
+    company: {
+      key: {
+        es: 'Compañía:',
+        en: 'Company:'
+      },
+      value:{
+        es:'Walmeric',
+        en:'Walmeric'
+      }
+    },
+    duration: {
+      key: {
+        es: 'Duración:',
+        en: 'Duration:'
+      },
+      value:{
+        es:'1 mes.',
+        en:'1 month.'
+      }
+    },
+    more:{ 
+      es:'Más detalles...' , 
+      en:'More details...'
+    },
+    hide:{ 
+      es:'Ocultar...' , 
+      en:'Hide...'
+    },
+    details:{
+      es:[
+        'Desarrollo de "D3A", app React para la gestión y conversión de Leads para grupos de Call Center.',
+        'Implementación de la funcionaliadad para atender y realizar llamadas desde la aplicación',
+        'Stack tecnológico: React + redux, javascript, HTML5, CSS3, Markdown',
+        'Test unitarios con jest / enzime.',
+        'Generación de documentación para las nuevas funcionalidades.',
+        'Control de versiones con Git.',
+        'Metodología ágil de trabajo Scrum con trello.'],
+      en:[
+        'Develop "D3A", React app to management and lead conversion for Call Center work groups.',
+        'Implementation of funcionality to handle call using the application.',
+        'Stack: React + redux, javascript, HTML5, CSS3, Markdown.',
+        'Unit test with jest / enzime.',
+        'New features doc. generation.',
+        'Git as version Control code.',
+        'Scrum as agile methodology, using Trello.'
+      ]
+    }
+  },
   {
     date: '2020',
     role: {
@@ -526,6 +586,21 @@ const project = [
   }
 ];
 
+const contribution = [
+  {
+    img: './media/img/circular_bar.png',
+    alt: {
+      es: 'Barra progreso Circular',
+      en: 'Circular progress bar'
+    },
+    url: 'https://www.npmjs.com/package/react-multicolor-circular-progress-bar',
+    description: {
+      es: `Componente React consistente en un indicador circular o semicircular customizable y multi color`,
+      en: `Customizable multicolor circular or semicircular SVG progress bar react Component`
+    }
+  },
+];
+
 $(document).ready(function() {
   let lang=$('#lang').text().toLowerCase();
 
@@ -535,6 +610,7 @@ $(document).ready(function() {
   loadEducation(lang);
   loadExperience(lang);
   loadProject(lang);
+  loadContribution(lang);
   handleCollapseMenu();
 
   // Update the logos img each 2 seconds
@@ -550,6 +626,11 @@ $(document).ready(function() {
 function showDetails(lang) {
   $('.exp-show').click(function(e) {
     e.preventDefault();
+
+    const hideDetails = $(this).parent().hasClass('timeline-panel-close');
+    if(hideDetails) $(this).parent().removeClass('timeline-panel-close');
+    else $(this).parent().addClass('timeline-panel-close');
+
     let el = $(this).text();
     if(lang ==='es'){
       el = el === "Más detalles..." ? "Ocultar..." : "Más detalles...";
@@ -649,7 +730,7 @@ function loadExperience(lang){
         $(exp_list_el).append(element);
       });
 
-      li_panel_el= $(`<li class="timeline-panel"></li>`);
+     li_panel_el=  $(`<li class="timeline-panel timeline-panel-close"></li>`);
 
       $(li_panel_el)
       .append(role_el)
@@ -659,7 +740,7 @@ function loadExperience(lang){
       .append(show_more_el);
     }
 
-    $(ul_el).append(li_tldate_el);
+    if(e.date) $(ul_el).append(li_tldate_el);
     if(li_panel_el) $(ul_el).append(li_panel_el);
 
     $(ul_el).appendTo('.experience');
@@ -677,6 +758,20 @@ function loadProject(lang){
       .append(url_el);
 
     $(figure_el).appendTo('.projects');
+  });
+}
+
+function loadContribution(lang){
+  $('.contributions >figure').remove();
+  contribution.forEach(e=>{
+    const figure_el = $(`<figure></figure>`);
+    const img_el = $(`<img src = '${e.img}' alt=${e.alt[lang]}/>`);
+    const url_el = $(`<a href=${e.url} ${e.url !=='#' ? 'target=_blank"' : null}>${e.description[lang]}</a>`);
+    $(figure_el)
+      .append(img_el)
+      .append(url_el);
+
+    $(figure_el).appendTo('.contributions');
   });
 }
 
@@ -716,7 +811,7 @@ function scrollToSection() {
   });
 }
 
-function handleLang(lang){
+function handleLang(lang, hideDetails){
   $(".flags >img").click( e=>{
     let alt= e.target.alt;
     lang= alt ==="es_flag" ? "es" : "en";
@@ -726,9 +821,10 @@ function handleLang(lang){
     loadNavLinks(lang);
     loadSkill(lang);
     loadEducation(lang);
-    loadExperience(lang);
+    loadExperience(lang, hideDetails);
     showDetails(lang);
     loadProject(lang);
+    loadContribution(lang);
   });
 }
 

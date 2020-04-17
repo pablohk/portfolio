@@ -208,6 +208,7 @@ body {
 
 .timeline-panel {
   width: 70%;
+  max-width: 800px;
   position: relative;
   padding: 1rem;
   margin-left: 1.3rem;
@@ -219,6 +220,10 @@ body {
   -webkit-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
   -moz-box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
   box-shadow: 0 1px 6px rgba(214, 6, 6, 1);
+}
+
+.timeline-panel-close {
+  max-width: 320px !important;
 }
 
 .timeline-panel:before {
@@ -263,16 +268,20 @@ body {
 
 /* End experience section _____________________________*/
 
-/* Start proyect section _____________________________*/
+/* Start proyect and contribution section _____________________________*/
+.contributions-bg {
+  background-image: url('../media/img/contribution-BG.jpg');
+}
+
 .projects-bg {
   background-image: url('../media/img/proyect-BG.jpg');
 }
 
-.projects{
+.projects, .contributions{
   padding:40px 0px;
 }
 
-.projects  > figure {
+.projects  > figure , .contributions > figure{
   width: 14rem;
   height: 14rem;
   position: relative;
@@ -280,15 +289,15 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.projects  > figure:hover a {
+.projects  > figure:hover a , .contributions  > figure:hover a{
   opacity: 0.8;
 }
 
-.projects > figure > img {
+.projects > figure > img, .contributions > figure > img {
   width: 100%;
 }
 
-.projects > figure > a {
+.projects > figure > a, .contributions > figure > a {
   position: absolute;
   top: 0;
   left: 0;
@@ -305,7 +314,7 @@ body {
   text-align: justify;
   line-height: 25px;
 }
-/* End proyect section _____________________________*/
+/* End proyect  and contribution section _____________________________*/
 
 /* Start footer _____________________________*/
 
